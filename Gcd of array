@@ -1,0 +1,12 @@
+class Solution {
+    public int findGCD(int[] nums) {
+        Arrays.sort(nums);
+        int d=nums.length-1;
+        while(nums[d]!=0){
+            int temp=nums[d];
+            nums[d]=nums[0]%nums[d];
+            nums[0]=temp;
+        }
+        return nums[0];
+    }
+}
